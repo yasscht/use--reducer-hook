@@ -15,7 +15,13 @@ const Todo = ({ todo, dispatch }) => {
       >
         toggle
       </button>
-      <button>delete</button>
+      <button
+        onClick={() =>
+          dispatch({ type: ACTIONS.DELETE_TODO, payload: { id: todo.id } })
+        }
+      >
+        delete
+      </button>
     </div>
   );
 };
